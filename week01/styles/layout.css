@@ -2,31 +2,58 @@
    margin : 0; 
 }
 h1 {
-    background-color: darkgray;
+    background-color: #303030;
     color: white;
+    font-size: 25px;
+    height: 200px;
+}
+
+h1, main, aside, footer {
+    padding: 20px 0px 0px 20px;
 }
 ul {
     background-color: black;
     list-style: none;
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px 20px 0px;
+    height: 40px;
 }
 li {
     background-color: black;
+    list-style-position: inside;
 }
 li a {
     color: white;
     text-decoration: none;
+    font-size: 20px;
+}
+body {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 300px 500px 300px;
+    font-size: 25px;
+}
+header {
+    grid-column: 1/3;
+    grid-row: 1/2;
 }
 main {
-    background-color: gray;
+    background-color: lightgray;
     color: black;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 aside {
     background-color: white;
     color: black;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 footer {
-    background-color: darkgray;
+    background-color: #303030;
     color: white;
+    grid-column: 1/3;
+    grid-row: 3/4;
 }
 
