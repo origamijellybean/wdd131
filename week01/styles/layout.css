@@ -1,0 +1,24 @@
+h1 {
+    background-color: darkgray;
+    color: white;
+}
+ul {
+    background-color: black;
+}
+li {
+    background-color: black;
+    color: white;
+}
+main {
+    background-color: gray;
+    color: black;
+}
+aside {
+    background-color: white;
+    color: black;
+}
+footer {
+    background-color: darkgray;
+    color: white;
+}
+
