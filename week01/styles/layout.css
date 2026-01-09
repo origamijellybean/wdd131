@@ -1,13 +1,21 @@
+* {
+   margin : 0; 
+}
 h1 {
     background-color: darkgray;
     color: white;
 }
 ul {
     background-color: black;
+    list-style: none;
+    display: block;
 }
 li {
     background-color: black;
+}
+li a {
     color: white;
+    text-decoration: none;
 }
 main {
     background-color: gray;
