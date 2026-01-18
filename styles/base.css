@@ -7,6 +7,7 @@
 }
 header {
     color: lightgray;
+    background-color: black;
 }
 h1, h2 {
     font-family: 'Times New Roman', Times, serif;
