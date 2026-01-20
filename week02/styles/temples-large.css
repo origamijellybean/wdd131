@@ -1,0 +1,14 @@
+@media screen and (min-width: 500px) {
+    nav ul{
+        display:flex;
+        width: 100%;
+        justify-content: space-evenly;
+        
+    }
+    #menu {
+        display: none;
+    }
+    div {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
