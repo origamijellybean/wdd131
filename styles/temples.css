@@ -22,9 +22,7 @@
 	/* content: "X"; */
     content:"▲";
 }
-nav ul {
-    display: flex;
-}
+
 header {
     color: lightgray;
     background-color: black;
