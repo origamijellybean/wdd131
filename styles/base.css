@@ -6,7 +6,7 @@
     "GRAD" 0;
 }
 header {
-    color: lightgray;
+    color: #f2f2f2;
     background-color: black;
 }
 h1, h2 {
@@ -28,7 +28,7 @@ body {
     padding: 10px 0 10px 0;
     display: block;
     background-color: darkgreen;
-    color: lightgray;
+    color: #f2f2f2;
     text-align: center;
     align-content: center;
     height: 50px;
@@ -40,11 +40,11 @@ nav {
     display: flex;
     justify-content: space-evenly;
     background-color: #303030;
-    color: lightgray;
+    color: #f2f2f2;
 }
 
 nav a {
-    color: lightgray;
+    color: #f2f2f2;
     text-decoration: none;
 }
 nav a:hover {
@@ -66,7 +66,7 @@ h2 {
     background-color: darkgreen;
     border-radius: 5px 5px 0 0;
     margin-top: 0px;
-    color: lightgray;
+    color: #f2f2f2;
 }
 main {
     max-width: 1500px;
@@ -183,7 +183,7 @@ main {
 }
 footer {
     background-color: darkgreen;
-    color: lightgray;
+    color: #f2f2f2;
     display: block;
     text-align: center;
     height: 75px;
