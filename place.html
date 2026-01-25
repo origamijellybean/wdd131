@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willard, Utah</title>
+    <meta name="author" content="Tyson Hunter">
+    <meta name="description" content="This page, descripbing Willard, Utah, is an example of dynamic webpages, using javascript, to support mobile and desktop screen sizes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="stylesheet" href="styles/place-small.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>Willard, Utah</span>
+        </h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/WillardUtahMountains-xlarge.webp" alt="Picture of Willard, Utah mountains" media="(min-width: 2000px)">
+            <source srcset="images/WillardUtahMountains-large.webp" alt="Picture of Willard, Utah mountains" media="(min-width: 1000px)">
+            <source srcset="images/WillardUtahMountains-medium.webp" alt="Picture of Willard, Utah mountains" media="(min-width: 700px)">
+            <source srcset="images/WillardUtahMountains-tall.webp" alt="Picture of Willard, Utah mountains" media="(min-width: 400px)">
+            <img src="images/WillardUtahMountains-tall-narrow.webp" alt="Picture of Willard, Utah mountains">
+        </picture>
+        <section id="data">
+            <h2>Data</h2>
+            <ul class="list">
+                <li>
+                    <h3>Area:</h3>
+                    <p>7.08 mi²</p>
+                </li>
+                <li>
+                    <h3>Population:</h3>
+                    <p>1,978</p>
+                </li>
+                <li>
+                    <h3>Elevation:</h3>
+                    <p>4350.5 feet</p>
+                </li>
+                <li>
+                    <h3>Languages:</h3>
+                    <p>English</p>
+                </li>
+                <li>
+                    <h3>Currency:</h3>
+                    <p>US dollar</p>
+                </li>
+                <li>
+                    <h3>Time Zone:</h3>
+                    <p>UTC-7 (MST)</p>
+                </li>
+                <li>
+                    <h3>Calling Code:</h3>
+                    <p>+1</p>
+                </li>
+                <li>
+                    <h3>Nearby Places:</h3>
+                    <p>Ogden, Brigham City</p>
+                </li>
+            </ul>
+        </section>
+        <section id="weather">
+            <h2>Weather</h2>
+            <span>
+                <img src="images/weather.svg" alt="Weather icon, cloud with sun">
+            </span>
+            <ul class="list">
+                <li>
+                    <h3>Temperature:</h3>
+                    <p id="temperature"></p>
+                </li>
+                <li>
+                    <h3>Conditions:</h3>
+                    <p id="condition"></p>
+                </li>
+                <li>
+                    <h3>Wind:</h3>
+                    <p id="wind"></p>
+                </li>
+                <li>
+                    <h3>Wind Chill:</h3>
+                    <p id="windchill"></p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p id="currentyear"><span></span></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
