@@ -72,13 +72,14 @@ main picture {
     display: block;
     text-align: center;
     max-width: 100%;
-    aspect-ratio: 16/9;
+    width: auto;
+    height: auto;
     position: relative;
 }
 picture img {
     margin-inline: auto;
     width: 100%;
-    aspect-ratio: 16/9;
+    height: auto;
     display: block;
 }
 main section {

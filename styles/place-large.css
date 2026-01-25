@@ -3,6 +3,9 @@
         position: relative;
         font-size: 13px;
     }
+    picture img {
+        aspect-ratio: 16/9;
+    }
     main section {
         position: absolute;
         width: 300px;
