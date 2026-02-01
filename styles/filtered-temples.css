@@ -1,0 +1,164 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+#menu {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #f2f2f2;
+    background: #303030;
+    border-color: darkgreen;
+}
+#menu::before {
+	content: "☰";
+    /* content: "▼"; */
+}
+
+#menu.visible::before {
+	/* content: "X"; */
+    content:"▲";
+}
+
+header {
+    color: #f2f2f2;
+    background-color: black;
+}
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+    text-align: center;
+}
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    margin: 0px;
+    min-height: 100vh;
+    height: 100%;
+}
+
+header span {
+    padding: 10px 50px;
+    display: block;
+    background-color: darkgreen;
+    color: #f2f2f2;
+    text-align: center;
+    align-content: center;
+    height: min-content;
+    font-size: 25px;
+} 
+
+nav ul.visible {
+    padding: 10px 0 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    color: #f2f2f2;
+    margin: 0px;
+}
+nav ul {
+    display: none;
+}
+nav li {
+    padding: 2px;
+    display: block;
+}
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+nav a:hover {
+    color: orange;
+    text-decoration: underline overline;
+    text-decoration-color: green;
+    text-underline-offset: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border-radius: 12px 12px 0 0;
+    margin-top: 0px;
+    color: #f2f2f2;
+}
+main {
+    max-width: 1000px;
+    /*the max width still applies with the 100% width. the 100% width shrinks to width on smaller screens*/
+    width: 100%;
+    /*evens the margins on either side*/
+    margin-inline: auto;
+}
+div {
+    display: grid;
+    /*overridden by temples-large when on a larger than 500px screen*/
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.facts {
+    display: grid;
+}
+
+.facts li {
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+    padding: 5px;
+}
+
+.facts li h3 {
+    margin: 2px;
+    color: darkgreen;
+}
+.facts li p {
+    margin: 2px;
+}
+
+article {
+    border: 4px outset saddlebrown;
+    border-radius: 17px;
+}
+
+article img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer {
+    background-color: darkgreen;
+    color: #f2f2f2;
+    display: block;
+    text-align: center;
+    height: 75px;
+}
+#currentyear {
+    margin-bottom: 5px;
+}
+#lastModified {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 400;
+}
