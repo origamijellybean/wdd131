@@ -1,0 +1,246 @@
+/* body {
+    background-color: darkgreen;
+    color: white;
+}
+main {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+section {
+    border: 5px solid saddlebrown;
+    background-color: white;
+}
+section p, section h2 {
+    color: black;
+}
+section h3 {
+    color: darkgreen;
+}
+section h2 {
+    font-family: "Quicksand";
+    font-size: 400;
+}
+
+.chakra-petch-light {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.chakra-petch-regular {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chakra-petch-medium {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.chakra-petch-semibold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.chakra-petch-bold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.chakra-petch-light-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.chakra-petch-regular-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.chakra-petch-medium-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.chakra-petch-semibold-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.chakra-petch-bold-italic {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+#menu {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #f2f2f2;
+    background: #303030;
+    border-color: darkgreen;
+}
+#menu::before {
+	content: "☰";
+    /* content: "▼"; */
+}
+
+#menu.visible::before {
+	/* content: "X"; */
+    content:"▲";
+}
+
+header {
+    color: #f2f2f2;
+    background-color: black;
+}
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+    text-align: center;
+}
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+header span {
+    padding: 10px 50px;
+    display: block;
+    background-color: darkgreen;
+    color: #f2f2f2;
+    text-align: center;
+    align-content: center;
+    height: min-content;
+    font-size: 30px;
+    font-family: "Chakra Petch";
+    font-style: italic;
+} 
+
+nav ul.visible {
+    padding: 10px 0 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    color: #f2f2f2;
+    margin: 0px;
+}
+nav ul {
+    display: none;
+}
+nav li {
+    padding: 2px;
+    display: block;
+}
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+nav a:hover {
+    color: orange;
+    text-decoration: underline overline;
+    text-decoration-color: green;
+    text-underline-offset: 5px;
+}
+/* ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+} */
+li h3 {
+    color: darkgreen;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0px;
+    color: #f2f2f2;
+}
+main {
+    max-width: 1000px;
+    /*the max width still applies with the 100% width. the 100% width shrinks to width on smaller screens*/
+    width: 100%;
+    /*evens the margins on either side*/
+    margin-inline: auto;
+    display: grid;
+    /*overridden by temples-large when on a larger than 500px screen*/
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-gap: 15px;
+    padding: 15px;
+}
+section {
+    border: 5px outset saddlebrown;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+}
+p {
+    padding: 0px 10px;
+}
+.site-name {
+    text-align: center;
+    font-style: italic;
+    font-family: "Chakra Petch";
+    color: darkgreen;
+}
+figure img {
+    width: 300px;
+    height: auto;
+}
+figure figcaption {
+    text-align: center;
+}
+footer {
+    background-color: darkgreen;
+    color: #f2f2f2;
+    display: block;
+    text-align: center;
+    height: 75px;
+}
+#currentyear {
+    margin-bottom: 5px;
+}
+#lastModified {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 400;
+}
