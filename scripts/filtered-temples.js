@@ -169,7 +169,8 @@ function createCards(templeList, fltrNm) {
         factDataDate.innerHTML = "";
         const factDataArea = document.createElement("p");
         factDataArea.innerHTML = "";
-
+        
+        const templeWrap = document.createElement("div");
         const templePic = document.createElement("img");
 
         templeName.innerHTML = temple.templeName;
@@ -197,7 +198,8 @@ function createCards(templeList, fltrNm) {
         templePic.loading = "lazy";
         templePic.width = "300";
         templePic.height = "auto";
-        templeCard.appendChild(templePic);
+        templeWrap.appendChild(templePic);
+        templeCard.appendChild(templeWrap);
 
         cardParent.appendChild(templeCard);
     });
