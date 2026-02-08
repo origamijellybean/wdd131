@@ -47,11 +47,12 @@ main {
     max-width: 1500px;
     width: 100%;
     justify-self: center;
-}
-#main{
     box-sizing: border-box;
     padding: 15px;
     gap: 10px;
+}
+main h2, main p {
+    text-align: center;
 }
 form {
     display: grid;
@@ -102,7 +103,7 @@ legend {
 label {
    font-size: 16px; 
 }
-#productname .subtext, #radio .subtext, #installationDate .subtext {
+#productname .subtext, #radio .subtext, #installationdate .subtext {
     font-size: 20px;
 }
 
@@ -116,7 +117,9 @@ label {
     color: gold;
     font-size: 16px;
 }
-
+input[type='submit'] {
+    padding: 3px;
+}
 footer {
     background-color: darkgreen;
     color: #f2f2f2;

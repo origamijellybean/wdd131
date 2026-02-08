@@ -3,7 +3,6 @@ const lastModified = document.getElementById("lastModified");
 const today = new Date();
 currentyear.innerHTML = `© <span>${today.getFullYear()} Tyson Hunter, Utah</span>`;
 lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
-let submission = JSON.parse(localStorage.getItem("submissions")) || 0;
 
 const products = [
   {
@@ -33,16 +32,27 @@ const products = [
   }
 ];
 
-const productSelector = document.querySelector("select");
-const form = document.querySelector("form");
-products.forEach(product => {
-    let productElement = document.createElement("option");
-    productElement.textContent = product.name;
-    productElement.value = product.id;
-    productSelector.appendChild(productElement);
-});
+if (window.location.pathname.includes("form.html")) {
+    const productSelector = document.querySelector("select");
+    const form = document.querySelector("form");
+    products.forEach(product => {
+        let productElement = document.createElement("option");
+        productElement.textContent = product.name;
+        productElement.value = product.id;
+        productSelector.appendChild(productElement);
+    });
+}
 
-form.addEventListener("submit", () => {
-    submission++;
-    localStorage.setItem("submissions", JSON.stringify(submission));
-});
+if (window.location.pathname.includes("review.html")) {
+    let count = (JSON.parse(localStorage.getItem("submissions")) || 0);
+    count++;
+    let numberOfSubmissions = document.querySelector("#number-of-submissions");
+    numberOfSubmissions.innerHTML = `You have reviewed ${count} products`;
+    localStorage.setItem("submissions", JSON.stringify(count));
+}
+
+// let submission = JSON.parse(localStorage.getItem("submissions")) || 0;
+// form.addEventListener("submit", () => {
+//     submission++;
+//     localStorage.setItem("submissions", JSON.stringify(submission));
+// });
