@@ -20,44 +20,52 @@
             <fieldset id="productname">
                 <legend>Product Name<span class="subtext">*</span></legend>
                 <!-- <label for="product">Product</label> -->
-                <select id="product" name="product" required>
-                    <option disabled selected>Select a Product...</option>
-                </select>
+                <label for="product">
+                    <select id="product" name="product" required>
+                        <option disabled selected>Select a Product...</option>
+                    </select>
+                </label>
             </fieldset>
             <fieldset id="radio">
                 <legend>Overall Rating<span class="subtext">*</span></legend>
-                <label><input type="radio" id="5star" name="rating" value="5" required>☆☆☆☆☆</label>
-                <label><input type="radio" id="4star" name="rating" value="4" required>☆☆☆☆</label>
-                <label><input type="radio" id="3star" name="rating" value="3" required>☆☆☆</label>
-                <label><input type="radio" id="2star" name="rating" value="2" required>☆☆</label>
-                <label><input type="radio" id="1star" name="rating" value="1" required>☆</label>
+                <label for="radio"><input type="radio" id="5star" name="rating" value="5" required>☆☆☆☆☆</label>
+                <label for="radio"><input type="radio" id="4star" name="rating" value="4" required>☆☆☆☆</label>
+                <label for="radio"><input type="radio" id="3star" name="rating" value="3" required>☆☆☆</label>
+                <label for="radio"><input type="radio" id="2star" name="rating" value="2" required>☆☆</label>
+                <label for="radio"><input type="radio" id="1star" name="rating" value="1" required>☆</label>
             </fieldset>
             <fieldset id="installationdate">
                 <legend>Date of Installation<span class="subtext">*</span></legend>
                 <!-- <label for="date">Date</label> -->
-                <input type="date" id="date" name="date" required>
+                <label for="date"><input type="date" id="date" name="date" required></label>
             </fieldset>
             <fieldset id="checkbox">
                 <legend>Useful Features <span class="subtext">(select all that apply)</span></legend>
-                <label><input type="checkbox" name="value" value="yes">Value</label>
-                <label><input type="checkbox" name="durability" value="yes">Durability</label>
-                <label><input type="checkbox" name="design" value="yes">Design</label>
-                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label for="checkbox"><input type="checkbox" name="value" value="yes">Value</label>
+                <label for="checkbox"><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label for="checkbox"><input type="checkbox" name="design" value="yes">Design</label>
+                <label for="checkbox"><input type="checkbox" name="ease" value="yes">Ease of Use</label>
             </fieldset>
             <fieldset>
                 <legend>Written Review <span class="subtext">(optional)</span></legend>
                 <!-- <label for="review">Your Review</label> -->
-                <textarea id="review" name="review" rows="4" placeholder="I loved this product because..."></textarea>
+                <label for="review">
+                    <textarea id="review" name="review" rows="4" placeholder="I loved this product because..."></textarea>
+                </label>
             </fieldset>
             <fieldset>
                 <legend>Name <span class="subtext">(optional)</span></legend>
                 <!-- <label for="username">Name</label> -->
-                <input type="text" id="name" name="name" placeholder="Kevin Bacon">
+                <label="text">
+                    <input type="text" id="name" name="name" placeholder="Kevin Bacon">
+                </label>
             </fieldset>
             <fieldset>
                 <legend>Submission</legend>
                 <!-- <label for="submit">Submit</label> -->
-                <input type="submit" value="Submit Review">
+                <label for="submit">
+                    <input type="submit" value="Submit Review">
+                </label>
             </fieldset>
         </form>
     </main>

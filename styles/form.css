@@ -56,21 +56,19 @@ main h2, main p {
 }
 form {
     display: grid;
-    background-color: darkgreen;
-    border: outset saddlebrown 5px;
-    border-radius: 6px;
     margin: 20px 0px;
     width: 100%;
     margin-inline: auto;
 }
-
+form, fieldset {
+    border: outset saddlebrown 3px;
+    border-radius: 6px;
+    background-color: darkgreen;
+}
 fieldset {
     color: white;
-    background-color: darkgreen;
     border: none;
-    border-radius: 5px;
     margin: 10px 15px;
-    border: outset saddlebrown 3px;
     padding: 15px;
 }
 
