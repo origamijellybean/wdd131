@@ -79,7 +79,6 @@ main {
     box-sizing: border-box;
     padding: 15px;
     gap: 10px;
-    
 }
 .card {
     border:4px outset #303030;

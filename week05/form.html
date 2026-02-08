@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An example of a form using Javascript, CSS, and HTML.">
     <meta name="author" content="Tyson Hunter">
-    <title>Form</title>
+    <link rel="preload" href="styles/quicksand.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Product Review Form</title>
     <script src="scripts/form.js" defer></script>
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
 </head>
 <body>
     <header>
-
+        <h1 class="page-title">Product Review</h1>
     </header>
     <main>
-
+        <form method="get" action="review.html">
+            <fieldset id="productname">
+                <legend>Product Name<span class="subtext">*</span></legend>
+                <!-- <label for="product">Product</label> -->
+                <select id="product" name="product" required>
+                    <option disabled selected>Select a Product...</option>
+                </select>
+            </fieldset>
+            <fieldset id="radio">
+                <legend>Overall Rating<span class="subtext">*</span></legend>
+                <label><input type="radio" id="5star" name="rating" value="5" required>☆☆☆☆☆</label>
+                <label><input type="radio" id="4star" name="rating" value="4" required>☆☆☆☆</label>
+                <label><input type="radio" id="3star" name="rating" value="3" required>☆☆☆</label>
+                <label><input type="radio" id="2star" name="rating" value="2" required>☆☆</label>
+                <label><input type="radio" id="1star" name="rating" value="1" required>☆</label>
+            </fieldset>
+            <fieldset id="installationDate">
+                <legend>Date of Installation<span class="subtext">*</span></legend>
+                <!-- <label for="date">Date</label> -->
+                <input type="date" id="date" name="date" required>
+            </fieldset>
+            <fieldset id="checkbox">
+                <legend>Useful Features <span class="subtext">(select all that apply)</span></legend>
+                <label><input type="checkbox" name="value" value="yes">Value</label>
+                <label><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review <span class="subtext">(optional)</span></legend>
+                <!-- <label for="review">Your Review</label> -->
+                <textarea id="review" name="review" rows="4" placeholder="I loved this product because..."></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Name <span class="subtext">(optional)</span></legend>
+                <!-- <label for="username">Name</label> -->
+                <input type="text" id="name" name="name" placeholder="Kevin Bacon">
+            </fieldset>
+            <fieldset>
+                <legend>Submission</legend>
+                <!-- <label for="submit">Submit</label> -->
+                <input type="submit" value="Submit Review">
+            </fieldset>
+        </form>
     </main>
     <footer>
         <p id="currentyear"><span></span></p>
