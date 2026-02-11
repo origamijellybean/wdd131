@@ -8,7 +8,33 @@
     #menu {
         display: none;
     }
-    div {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .cards {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        padding: 10px;
+    }
+    #mini-img1 {
+        display: block;
+        width: 50px;
+        align-self: center;
+        justify-self: end;
+        grid-column: 1/2;
+    }
+    #mini-img2 {
+        display: block;
+        width: 50px;
+        align-self: center;
+        justify-self: start;
+        grid-column: 3/4;
+    }
+    header span {
+        grid-column: 2/3;
+
+    }
+    header div {
+        display: grid;
+        grid-template-columns: 1fr 350px 1fr;
     }
 }
