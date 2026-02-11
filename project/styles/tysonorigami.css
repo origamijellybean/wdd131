@@ -88,12 +88,13 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
+    padding: 3px;
 }
 nav a:hover {
-    color: orange;
-    text-decoration: underline overline;
-    text-decoration-color: saddlebrown;
-    text-underline-offset: 5px;
+    color: darkgreen;
+    border: 2px dashed orange;
+    background-color: white;
+    color: darkgreen;
 }
 
 main h1 {
@@ -182,16 +183,12 @@ main a:link {
     color: white;
     text-decoration: none;
 }
-main a:visited {
-    color: orange;
-}
+
 main a:hover {
     border: 2px dashed orange;
+    background-color: white;
+    color: darkgreen;
 }
-main a:active {
-    color: orange;
-}
-
 footer {
     background-color: darkgreen;
     border-top: 6px outset saddlebrown;
@@ -206,23 +203,20 @@ footer {
     margin: 20px 0px 10px 0px;
     padding: 5px;
     border: outset saddlebrown 1px;
-
+    background-color: darkgreen;
+    color: white;
 }
 .citations-page a:link {
     color: white;
     text-decoration: none;
 }
-.citations-page a:visited {
-    color: orange;
-    text-decoration-color: white;
-}
+
 .citations-page a:hover {
     border: dashed orange 1px;
+    color: darkgreen;
+    background-color: white;
 }
-.citations-page a:active {
-    color: orange;
-    text-decoration-color: white;
-}
+
 #currentyear {
     margin-bottom: 5px;
     margin-top: 5px;
