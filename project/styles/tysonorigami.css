@@ -84,6 +84,7 @@ nav ul {
 nav li {
     padding: 2px;
     display: block;
+    text-align: center;
 }
 nav a {
     color: white;
