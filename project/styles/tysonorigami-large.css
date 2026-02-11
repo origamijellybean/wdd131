@@ -15,19 +15,21 @@
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         padding: 10px;
     }
-    #mini-img1 {
+    header img {
         display: block;
         width: 50px;
         align-self: center;
+        border: outset saddlebrown 2px;
+        border-radius: 5px;
+    }
+    #mini-img1 {
         justify-self: end;
         grid-column: 1/2;
     }
     #mini-img2 {
-        display: block;
-        width: 50px;
-        align-self: center;
         justify-self: start;
         grid-column: 3/4;
+
     }
     header span {
         grid-column: 2/3;
