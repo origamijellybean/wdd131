@@ -175,15 +175,15 @@ section button {
 .history figure, .paper figure, .styles figure, .designs figure {
     display: flex;
 }
-.history p, .paper p, .styles p, .designs p {
+.history div, .paper div, .styles div, .designs div {
     display: none;
 }
 
 .history.visible figure, .paper.visible figure, .styles.visible figure, .designs.visible figure {
     display: none;
 }
-.history.visible p, .paper.visible p, .styles.visible p, .designs.visible p {
-    display: flex;
+.history.visible div, .paper.visible div, .styles.visible div, .designs.visible div {
+    display: block;
     padding: 15px;
 }
 
