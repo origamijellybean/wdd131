@@ -12,23 +12,34 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("visible");
 })
 
-const history = document.querySelector("#history");
-const styles = document.querySelector("#styles");
-const paper = document.querySelector("#paper");
-const designs = document.querySelector("#designs");
-history.addEventListener("click", () => {
-    // navigation.classList.toggle("visible");
-    // hamburger.classList.toggle("visible");
+
+const historyBtn = document.querySelector("#history");
+const stylesBtn = document.querySelector("#styles");
+const paperBtn = document.querySelector("#paper");
+const designsBtn = document.querySelector("#designs");
+const history = document.querySelector(".history");
+const styles = document.querySelector(".styles");
+const paper = document.querySelector(".paper");
+const designs = document.querySelector(".designs");
+const historyFig = history.querySelector("figure");
+const stylesFig = styles.querySelector("figure");
+const paperFig = paper.querySelector("figure");
+const designsFig = designs.querySelector("figure");
+historyBtn.addEventListener("click", () => {
+    historyBtn.classList.toggle("visible");
+    history.classList.toggle("visible");
+    
 })
-styles.addEventListener("click", () => {
-    // navigation.classList.toggle("visible");
-    // hamburger.classList.toggle("visible");
+stylesBtn.addEventListener("click", () => {
+    stylesBtn.classList.toggle("visible");
+    styles.classList.toggle("visible");
 })
-paper.addEventListener("click", () => {
-    // navigation.classList.toggle("visible");
-    // hamburger.classList.toggle("visible");
+paperBtn.addEventListener("click", () => {
+    paperBtn.classList.toggle("visible");
+    paper.classList.toggle("visible");
 })
-designs.addEventListener("click", () => {
-    // navigation.classList.toggle("visible");
-    // hamburger.classList.toggle("visible");
+designsBtn.addEventListener("click", () => {
+    designsBtn.classList.toggle("visible");
+    designs.classList.toggle("visible");
 })
+

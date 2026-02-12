@@ -1,4 +1,4 @@
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
     nav ul{
         display: flex;
         width: 100%;
@@ -9,7 +9,6 @@
         display: none;
     }
     .cards {
-        display: grid;
         width: 100%;
         justify-items: center;
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));

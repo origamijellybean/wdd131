@@ -14,7 +14,7 @@
     font-weight: 500;
 }
 
-header nav, h2, section a, footer p {
+header nav, h2, section a, section p, footer p {
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-variation-settings: "GRAD" 0;
@@ -163,9 +163,45 @@ section button {
     color: white;
     border-color: darkgreen;
 }
+#history::before, #paper::before, #styles::before, #designs::before {
+    content: ">";
+}
+#history.visible::before, #paper.visible::before, #styles.visible::before, #designs.visible::before {
+    content: "V";
+}
+
+.history figure, .paper figure, .styles figure, .designs figure {
+    display: flex;
+}
+.history p, .paper p, .styles p, .designs p {
+    display: none;
+}
+
+.history.visible figure, .paper.visible figure, .styles.visible figure, .designs.visible figure {
+    display: none;
+}
+.history.visible p, .paper.visible p, .styles.visible p, .designs.visible p {
+    display: flex;
+}
+
+.paper a, .designs a {
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+    position: absolute;
+}
+.paper.visible a, .designs.visible a {
+    position: static;
+    display: block;
+    justify-self: center;
+    transform: translate(0);
+    margin: 10px;
+}
+
 
 figure {
     display: flex;
+    box-sizing: border-box;
     position: relative;
     margin: 0px;
     width: 100%;
@@ -174,19 +210,16 @@ figure {
     border-radius: 0px 0px 5px 5px;
     overflow: hidden;
 }
-figure a {
-    position: absolute;
+main section a {
     background: darkgreen;
     color: white;
     border: 2px outset saddlebrown;
-    left: 50%;
-    transform: translate(-50%);
     width: max-content;
-    bottom: 10%;
     padding: 5px 10px;
 }
 img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 main a:link {
