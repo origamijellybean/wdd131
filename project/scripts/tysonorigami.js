@@ -11,3 +11,24 @@ hamburger.addEventListener("click", () => {
     navigation.classList.toggle("visible");
     hamburger.classList.toggle("visible");
 })
+
+const history = document.querySelector("#history");
+const styles = document.querySelector("#styles");
+const paper = document.querySelector("#paper");
+const designs = document.querySelector("#designs");
+history.addEventListener("click", () => {
+    // navigation.classList.toggle("visible");
+    // hamburger.classList.toggle("visible");
+})
+styles.addEventListener("click", () => {
+    // navigation.classList.toggle("visible");
+    // hamburger.classList.toggle("visible");
+})
+paper.addEventListener("click", () => {
+    // navigation.classList.toggle("visible");
+    // hamburger.classList.toggle("visible");
+})
+designs.addEventListener("click", () => {
+    // navigation.classList.toggle("visible");
+    // hamburger.classList.toggle("visible");
+})

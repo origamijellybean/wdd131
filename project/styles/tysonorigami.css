@@ -14,7 +14,7 @@
     font-weight: 500;
 }
 
-nav, h2, section a, footer p {
+header nav, h2, section a, footer p {
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-variation-settings: "GRAD" 0;
@@ -153,6 +153,15 @@ section {
     border-radius: 10px;
     max-width: 600px;
     width: 100%;
+    position: relative;
+}
+section button {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background-color: #303030;
+    color: white;
+    border-color: darkgreen;
 }
 
 figure {
