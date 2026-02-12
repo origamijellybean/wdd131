@@ -116,7 +116,7 @@ main p {
 h2 {
     text-align: center;
     font-size: 20px;
-    height: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,14 +151,16 @@ main {
 section {
     border: 5px outset saddlebrown;
     border-radius: 10px;
+    box-sizing: border-box;
     max-width: 600px;
     width: 100%;
     position: relative;
 }
 section button {
     position: absolute;
-    left: 15px;
-    top: 15px;
+    font-size: 20px;
+    left: 11px;
+    top: 11px;
     background-color: #303030;
     color: white;
     border-color: darkgreen;
@@ -167,7 +169,7 @@ section button {
     content: ">";
 }
 #history.visible::before, #paper.visible::before, #styles.visible::before, #designs.visible::before {
-    content: "V";
+    content: "v";
 }
 
 .history figure, .paper figure, .styles figure, .designs figure {
@@ -182,6 +184,7 @@ section button {
 }
 .history.visible p, .paper.visible p, .styles.visible p, .designs.visible p {
     display: flex;
+    padding: 15px;
 }
 
 .paper a, .designs a {
