@@ -201,7 +201,6 @@ section button {
     margin: 10px;
 }
 
-
 figure {
     display: flex;
     box-sizing: border-box;
@@ -219,6 +218,9 @@ main section a {
     border: 2px outset saddlebrown;
     width: max-content;
     padding: 5px 10px;
+}
+section div li {
+    padding: 5px;
 }
 img {
     max-width: 100%;
