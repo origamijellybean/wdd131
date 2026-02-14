@@ -30,7 +30,60 @@
         </nav>
     </header>
     <main>
-
+        <form method="get" action="review.html">
+            <fieldset id="productname">
+                <legend>Product Name<span class="subtext">*</span></legend>
+                <!-- <label for="product">Product</label> -->
+                <label for="product">Product: 
+                    <select id="product" name="product" required>
+                        <option disabled selected value="">Select a Product...</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset id="radio">
+                <legend>Overall Rating<span class="subtext">*</span></legend>
+                <label for="5star"><input type="radio" id="5star" name="rating" value="5" required>☆☆☆☆☆</label>
+                <label for="4star"><input type="radio" id="4star" name="rating" value="4" required>☆☆☆☆</label>
+                <label for="3star"><input type="radio" id="3star" name="rating" value="3" required>☆☆☆</label>
+                <label for="2star"><input type="radio" id="2star" name="rating" value="2" required>☆☆</label>
+                <label for="1star"><input type="radio" id="1star" name="rating" value="1" required>☆</label>
+            </fieldset>
+            <fieldset id="installationdate">
+                <legend>Date of Installation<span class="subtext">*</span></legend>
+                <!-- <label for="date">Date</label> -->
+                <label for="date">Date: 
+                    <input type="date" id="date" name="date" required>
+                </label>
+            </fieldset>
+            <fieldset id="checkbox">
+                <legend>Useful Features <span class="subtext">(select all that apply)</span></legend>
+                <label for="value"><input type="checkbox" id="value" name="value" value="yes">Value</label>
+                <label for="durability"><input type="checkbox" id="durability" name="durability" value="yes">Durability</label>
+                <label for="design"><input type="checkbox" id="design" name="design" value="yes">Design</label>
+                <label for="ease"><input type="checkbox" id="ease" name="ease" value="yes">Ease of Use</label>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review <span class="subtext">(optional)</span></legend>
+                <!-- <label for="review">Your Review</label> -->
+                <label for="review"> Review: 
+                    <textarea id="review" name="review" rows="4" placeholder="I loved this product because..."></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Name <span class="subtext">(optional)</span></legend>
+                <!-- <label for="username">Name</label> -->
+                <label for="name">Name: 
+                    <input type="text" id="name" name="name" placeholder="Kevin Bacon">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Submission</legend>
+                <!-- <label for="submit">Submit</label> -->
+                <label for="submit">Submit:
+                    <input type="submit" id="submit" value="Submit Review">
+                </label>
+            </fieldset>
+        </form>
     </main>
     <footer>
         <p class="citations-page"><a class="citations-page" href="citations.html" title="citations-page">Citations page</a></p>
