@@ -17,6 +17,10 @@
     section {
         height: 350px;
     }
+    section div {
+        height: 260px; 
+        overflow-y: auto;
+    }
     header img {
         display: block;
         width: 50px;

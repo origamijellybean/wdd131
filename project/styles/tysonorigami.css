@@ -155,6 +155,7 @@ section {
     max-width: 600px;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 section button {
     position: absolute;
@@ -164,6 +165,7 @@ section button {
     background-color: #303030;
     color: white;
     border-color: darkgreen;
+    outline: none;
 }
 #history::before, #paper::before, #styles::before, #designs::before {
     content: ">";
@@ -187,17 +189,17 @@ section button {
     padding: 15px;
 }
 
-.paper a, .designs a {
+section a {
     left: 50%;
-    bottom: 10%;
-    transform: translate(-50%);
+    bottom: 20%;
+    transform: translateX(-50%);
     position: absolute;
 }
 .paper.visible a, .designs.visible a {
     position: static;
     display: block;
     justify-self: center;
-    transform: translate(0);
+    transform: translateX(0);
     margin: 10px;
 }
 
@@ -208,9 +210,14 @@ figure {
     margin: 0px;
     width: 100%;
     max-width: 600px;
-    aspect-ratio: 2/1;
+    /* aspect-ratio: 2/1; */
     border-radius: 0px 0px 5px 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+figure img {
+    display: block;
+    width: 50%;
+    height: auto;
 }
 main section a {
     background: darkgreen;
