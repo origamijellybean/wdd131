@@ -21,10 +21,7 @@ const history = document.querySelector(".history");
 const styles = document.querySelector(".styles");
 const paper = document.querySelector(".paper");
 const designs = document.querySelector(".designs");
-const historyFig = history.querySelector("figure");
-const stylesFig = styles.querySelector("figure");
-const paperFig = paper.querySelector("figure");
-const designsFig = designs.querySelector("figure");
+
 historyBtn.addEventListener("click", () => {
     historyBtn.classList.toggle("visible");
     history.classList.toggle("visible");
@@ -43,3 +40,4 @@ designsBtn.addEventListener("click", () => {
     designs.classList.toggle("visible");
 })
 
+// Need to populate the store with items, and the form stuff. Need a list so consumer can click on items to add to cart list. When done, they need to be able to put in card information. Once done, a thank you message should be displayed, or on another page.
