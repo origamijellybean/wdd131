@@ -244,6 +244,19 @@ main a:hover {
     background-color: white;
     color: darkgreen;
 }
+
+#store div p {
+    font-size: 20px;
+}
+#store .cards {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+[aria-disabled="true"] {
+    pointer-events: none;
+}
+
 footer {
     background-color: darkgreen;
     border-top: 6px outset saddlebrown;
@@ -280,4 +293,111 @@ footer {
     margin-top: 5px;
     font-size: 13px;
     margin-bottom: 5px;
+}
+
+
+
+
+form {
+    display: grid;
+    box-sizing: border-box;
+    max-width: 600px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+form,
+fieldset {
+    border: outset saddlebrown 3px;
+    border-radius: 6px;
+    background-color: darkgreen;
+}
+
+fieldset {
+    color: white;
+    margin: 10px 15px;
+    padding: 15px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+label {
+    display: inline-block;
+    /* text-align: right; */
+}
+/* input {
+    max-width: 300px;
+} */
+
+
+
+input[type="checkbox"] select,
+input[type="date"],
+input[type="submit"],
+input[type="select"],
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="month"],
+textarea {
+    width: 100%;
+}
+
+legend {
+    /* text-decoration: underline solid orange 1px; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background: darkgreen;
+    border-radius: 8px 8px 0px 0px;
+    padding: 5px 10px;
+    border-top: outset darkorange 2px;
+    border-right: outset darkorange 2px;
+    border-left: outset darkorange 2px;
+}
+
+#checkbox label {
+    display: block;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#radio {
+    /* display: flex; */
+    justify-content: space-around;
+}
+
+label {
+    font-size: 16px;
+}
+
+#productname .subtext,
+#radio .subtext,
+#installationdate .subtext {
+    font-size: 20px;
+}
+
+#productname select,
+#installationdate input,
+textarea,
+#name,
+#submit {
+    padding: 5px;
+}
+
+.subtext {
+    font-size: 12px;
+    font-style: italic;
+    /* color: gold; */
+}
+
+#radio label {
+    display: block;
+    color: gold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+input[type='submit'] {
+    padding: 3px;
 }
