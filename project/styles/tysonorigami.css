@@ -32,7 +32,6 @@ header nav, h2, section a, section p, footer p {
 	content: "☰";
     /* content: "▼"; */
 }
-
 #menu.visible::before {
 	/* content: "X"; */
     content:"▲";
@@ -42,15 +41,6 @@ header {
     color: white;
     background-color: darkgreen;
     border-bottom: 5px outset saddlebrown;
-}
-
-body {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    margin: 0;
-    min-height: 100vh;
-    height: 100%;
 }
 header div{
     border-bottom: outset saddlebrown 1px;
@@ -67,6 +57,9 @@ header span {
     font-family: "Chakra Petch";
     font-style: italic;
 } 
+header img {
+    display: none;
+}
 
 nav ul.visible {
     padding: 10px 0 10px 0px;
@@ -95,9 +88,27 @@ nav a:hover {
     color: darkgreen;
     border: 2px dashed orange;
     background-color: white;
-    color: darkgreen;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+main {
+    max-width: 1250px;
+    /*the max width still applies with the 100% width. the 100% width shrinks to width on smaller screens*/
+    width: 100%;
+    /*evens the margins on either side*/
+    margin-inline: auto;
+    place-items: center;
+    grid-gap: 15px;
+    padding: 15px 0px;
+}
 main h1 {
     border: 2px outset saddlebrown;
     border-radius: 5px;
@@ -113,6 +124,18 @@ main p {
     margin: 0px;
     padding-top: 25px;
 }
+
+main a:link {
+    color: white;
+    text-decoration: none;
+}
+
+main a:hover {
+    border: 2px dashed orange;
+    background-color: white;
+    color: darkgreen;
+}
+
 h2 {
     text-align: center;
     font-size: 20px;
@@ -128,26 +151,24 @@ h2 {
     color: white;
 }
 
-header img {
-    display: none;
-}
-main {
-    max-width: 1250px;
-    /*the max width still applies with the 100% width. the 100% width shrinks to width on smaller screens*/
-    width: 100%;
-    /*evens the margins on either side*/
-    margin-inline: auto;
-    place-items: center;
-    grid-gap: 15px;
-    padding: 15px 0px;
-}
-
 .cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
     padding-top: 10px;
     padding-bottom: 30px;
+}
+
+main section a {
+    background: darkgreen;
+    color: white;
+    border: 2px outset saddlebrown;
+    width: max-content;
+    padding: 5px 10px;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    position: absolute;
 }
 section {
     border: 5px outset saddlebrown;
@@ -168,6 +189,11 @@ section button {
     border-color: darkgreen;
     outline: none;
 }
+section div li {
+    padding: 5px;
+}
+
+
 #history::before, #paper::before, #styles::before, #designs::before {
     content: ">";
 }
@@ -190,15 +216,6 @@ section button {
     padding: 15px;
 }
 
-section a {
-    left: 50%;
-    bottom: 20%;
-    transform: translateX(-50%);
-    position: absolute;
-}
-
-
-
 .paper.visible a, .designs.visible a {
     position: static;
     display: block;
@@ -206,6 +223,7 @@ section a {
     transform: translateX(0);
     margin: 10px;
 }
+
 
 figure {
     display: flex;
@@ -223,31 +241,12 @@ figure img {
     width: 50%;
     height: auto;
 }
-main section a {
-    background: darkgreen;
-    color: white;
-    border: 2px outset saddlebrown;
-    width: max-content;
-    padding: 5px 10px;
-}
-section div li {
-    padding: 5px;
-}
 img {
     max-width: 100%;
     height: auto;
 }
 
-main a:link {
-    color: white;
-    text-decoration: none;
-}
 
-main a:hover {
-    border: 2px dashed orange;
-    background-color: white;
-    color: darkgreen;
-}
 #store img {
     display: block;
     margin-inline: 30%;
@@ -282,10 +281,6 @@ main a:hover {
     left: 45%;
     bottom: 20%;
     transform: translateX(0);
-}
-
-[aria-disabled="true"] {
-    pointer-events: none;
 }
 
 footer {
@@ -353,11 +348,6 @@ fieldset {
     grid-template-columns: 1fr;
 }
 
-label {
-    display: inline-block;
-}
-
-
 input[type="checkbox"] select,
 input[type="date"],
 input[type="submit"],
@@ -394,10 +384,17 @@ legend {
     /* display: flex; */
     justify-content: space-around;
 }
+#radio label {
+    display: block;
+    color: gold;
+    font-size: 16px;
+    padding: 5px;
+}
 
 label {
     font-size: 16px;
     max-width: 100%;
+    display: inline-block;
 }
 
 #productname .subtext,
@@ -420,17 +417,6 @@ textarea,
     /* color: gold; */
 }
 
-#radio label {
-    display: block;
-    color: gold;
-    font-size: 16px;
-    padding: 5px;
-}
-
-input[type='submit'] {
-    padding: 3px;
-}
-
 form p, label {
     padding: 8px 0px;
 }
@@ -451,4 +437,25 @@ form p, label {
     background-color: darkgreen;
     border-color: darkorange;
     border-radius: 4px;
+}
+#thanks {
+    border: 3px outset saddlebrown;
+    background-color: darkgreen;
+}
+
+.submitthanks {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+}
+#note {
+    color: white;
+    margin-top: 25px;
+}
+.submitnote {
+    border: 2px outset saddlebrown;
+    background-color: darkgreen;
+    color: white;
+    align-self: center;
+    padding: 15px;
 }

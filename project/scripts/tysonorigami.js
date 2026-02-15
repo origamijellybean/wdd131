@@ -32,23 +32,34 @@ if (window.location.pathname.includes("store.html")) {
     ];
     const productSelector = document.querySelector("select");
     const form = document.querySelector("form");
-    products.forEach(product => {
-        let productElement = document.createElement("option");
-        productElement.textContent = product.name;
-        productElement.value = product.id;
-        productSelector.appendChild(productElement);
-    });
+    
     const bookSelector = document.querySelector("#product");
     const prices = document.querySelectorAll(".rawprice");
     const taxes = document.querySelector(".tax");
     const shippingCost = document.querySelector(".shipping");
     const totalCost = document.querySelector(".total");
     const extraForms = document.querySelectorAll(".expandedForm");
+    
+    
+    populateSelectList();
 
     bookSelector.addEventListener('change', () => {
         extraForms.forEach(extraForm => {
             extraForm.classList.remove("invisible");
         });
+        calculateTotal();
+    });
+
+    function populateSelectList() {
+        products.forEach(product => {
+            let productElement = document.createElement("option");
+            productElement.textContent = product.name;
+            productElement.value = product.id;
+            productSelector.appendChild(productElement);
+        });
+    }
+
+    function calculateTotal() {
         let bookSelection = products.find(book => book.id === bookSelector.value);
         prices.forEach(price => {
             price.textContent = `Price (before shipping and tax): $${bookSelection.price}`;
@@ -59,8 +70,9 @@ if (window.location.pathname.includes("store.html")) {
         shippingCost.textContent = `Shipping: $${shipping.toFixed(2)}`;
         let total = bookSelection.price + tax + shipping;
         totalCost.textContent = `Total Cost: $${total.toFixed(2)}`;
-    });
+    }
 };
+
 if (window.location.pathname.includes("info-page.html")) {
     const historyBtn = document.querySelector("#history");
     const stylesBtn = document.querySelector("#styles");
@@ -87,4 +99,12 @@ if (window.location.pathname.includes("info-page.html")) {
         designsBtn.classList.toggle("visible");
         designs.classList.toggle("visible");
     });
+}
+
+if (window.location.pathname.includes("submission.html")) {
+    const purchasesElement = document.querySelector("h2");
+    let purchases = JSON.parse(localStorage.getItem("purchases")) || 0;
+    purchases++;
+    localStorage.setItem("purchases", JSON.stringify(purchases));
+    purchasesElement.textContent = `You have made ${purchases} purchases`;
 }
