@@ -8,18 +8,18 @@ const paper = document.querySelector(".paper");
 const designs = document.querySelector(".designs");
 
 historyBtn.addEventListener("click", () => {
-        historyBtn.classList.toggle("visible");
-        history.classList.toggle("visible");
+    historyBtn.classList.toggle("visible");
+    history.classList.toggle("visible");
 });
 stylesBtn.addEventListener("click", () => {
-        stylesBtn.classList.toggle("visible");
-        styles.classList.toggle("visible");
+    stylesBtn.classList.toggle("visible");
+    styles.classList.toggle("visible");
 });
 paperBtn.addEventListener("click", () => {
-        paperBtn.classList.toggle("visible");
-        paper.classList.toggle("visible");
+    paperBtn.classList.toggle("visible");
+    paper.classList.toggle("visible");
 });
 designsBtn.addEventListener("click", () => {
-        designsBtn.classList.toggle("visible");
-        designs.classList.toggle("visible");
+    designsBtn.classList.toggle("visible");
+    designs.classList.toggle("visible");
 });
