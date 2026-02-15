@@ -196,6 +196,9 @@ section a {
     transform: translateX(-50%);
     position: absolute;
 }
+
+
+
 .paper.visible a, .designs.visible a {
     position: static;
     display: block;
@@ -245,13 +248,35 @@ main a:hover {
     background-color: white;
     color: darkgreen;
 }
+#store img {
+    display: block;
+    margin-inline: 30%;
+    transform: translateX(-50%);
+    height: 265px;
+    margin-top: 2px;
+    width: auto;
+    border: 3px inset saddlebrown;
+}
 
+#store h2 {
+    border: 2px outset saddlebrown;
+}
 #store div p {
     font-size: 20px;
 }
 #store .cards {
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+#store section {
+    background-color: darkgreen;
+}
+
+#store section a {
+    left: 45%;
+    bottom: 20%;
+    transform: translateX(0);
 }
 
 [aria-disabled="true"] {
