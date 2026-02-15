@@ -12,24 +12,24 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("visible");
 });
 
-const products = [
-  {
-    id: "or-temple-bk",
-    name: "Temple book",
-    price: 14.99
-  },
-  {
-    id: "or-ctrflr-bk",
-    name: "Creatures & Flowers book",
-    price: 12.99
-  },
-  {
-    id: "or-symbol-bk",
-    name: "Scripture symbols book",
-    price: 13.99
-  }
-];
 if (window.location.pathname.includes("store.html")) {
+    const products = [
+    {
+        id: "or-temple-bk",
+        name: "Temple book",
+        price: 14.99
+    },
+    {
+        id: "or-ctrflr-bk",
+        name: "Creatures & Flowers book",
+        price: 12.99
+    },
+    {
+        id: "or-symbol-bk",
+        name: "Scripture symbols book",
+        price: 13.99
+    }
+    ];
     const productSelector = document.querySelector("select");
     const form = document.querySelector("form");
     products.forEach(product => {
@@ -88,4 +88,3 @@ if (window.location.pathname.includes("info-page.html")) {
         designs.classList.toggle("visible");
     });
 }
-// Need to populate the store with items, and the form stuff. Need a list so consumer can click on items to add to cart list. When done, they need to be able to put in card information. Once done, a thank you message should be displayed, or on another page.
