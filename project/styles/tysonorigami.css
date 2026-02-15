@@ -257,9 +257,14 @@ main a:hover {
     width: auto;
     border: 3px inset saddlebrown;
 }
-
+#store section sup {
+    font-size: 12px;
+    font-style: italic;
+}
 #store h2 {
     border: 2px outset saddlebrown;
+    line-height: 2;
+    
 }
 #store div p {
     font-size: 20px;
