@@ -62,7 +62,7 @@
                 <figure>
                     <!-- <img src="images/metal-origami-crane.webp" alt="tin foil folded bird" loading="lazy" width="300" height="300"> -->
                 </figure>
-                <a class="item-link" href="https://www.target.com/p/origami-in-action-by-robert-j-lang-paperback/-/A-11601217?" title="modular2-link">Buy the book online at Thriftbooks!</a>
+                <a class="item-link" href="https://www.thriftbooks.com/w/modern-kusudama-origami-designs-for-modular-origami-lovers_ekaterina-lukasheva/10784609/item/87754967" title="modular2-link">Buy the book online at Thriftbooks!</a>
             </section>
         </div>
         <div class="cards">
@@ -177,7 +177,7 @@
         </div>
 
 
-        <form id="store" method="get" action="review.html">
+        <form id="store" method="get" action="submission.html">
             <h2>Buy one of Tyson's Origami books!</h2>
             <fieldset>
                 <legend>Book<span class="subtext">*</span></legend>
@@ -187,54 +187,52 @@
                         <option disabled selected value="">Select a book...</option>
                     </select>
                 </label>
-                <p class="rawprice">Price (before shipping and tax): </p>
+                <p class="rawprice priceInfo">Price (before shipping and tax): </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="expandedForm invisible">
                 <legend>Credit Card Information <span class="subtext">*</span></legend>
                 <label for="firstname">First Name: 
-                    <input type="text" id="firstname" name="firstname" placeholder="Kevin" required>
+                    <input type="text" id="firstname" name="firstname" placeholder="Kevin" autocomplete="cc-given-name" required>
                 </label>
                 <label for="lastname">Last Name: 
-                    <input type="text" id="lastname" name="lastname" placeholder="Bacon" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Bacon" autocomplete="cc-family-name" required>
                 </label>
                 <label for="cardnumber">Card Number: 
-                    <input type="tel" id="cardnumber" name="cardnumber" placeholder="1234-5678-1234-5678" required>
+                    <input type="tel" id="cardnumber" name="cardnumber" placeholder="1234-5678-1234-5678" autocomplete="cc-number" required>
                 </label>
                 <label for="code">Security Code: 
-                    <input type="number" id="code" name="code" placeholder="123" required>
+                    <input type="number" id="code" name="code" placeholder="123" autocomplete="cc-csc" required>
                 </label>
                 <label for="date">Expiration date: 
-                    <input type="month" id="date" name="date" required>
+                    <input type="month" id="date" name="date" autocomplete="cc-exp" required>
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="expandedForm invisible">
                 <legend>Address <span class="subtext" required>*</span></legend>
                 <!-- <label for="username">Name</label> -->
                 <label for="country">Country: 
-                    <input type="text" id="country" name="country" placeholder="555 Nowhere West, ...">
+                    <input type="text" id="country" name="country" placeholder="ex. United States of America" required>
                 </label>
                 <label for="state">State: 
-                    <input type="text" id="state" name="state" placeholder="ex. Alaska">
+                    <input type="text" id="state" name="state" placeholder="ex. Alaska" required>
                 </label>
                 <label for="city">City: 
-                    <input type="text" id="city" name="city" placeholder="ex. Catcus-ville">
+                    <input type="text" id="city" name="city" placeholder="ex. Catcus-ville" required>
                 </label>
                 <label for="street">Street Address: 
-                    <input type="text" id="street" name="street" placeholder="555 Nowhere West, ...">
+                    <input type="text" id="street" name="street" placeholder="555 Nowhere West, ..." required>
                 </label>
                 <label for="zip">Zip: 
-                    <input type="tel" id="zip" name="zip" placeholder="12345">
+                    <input type="tel" id="zip" name="zip" placeholder="12345" required>
                 </label>
                 
             </fieldset>
-            <fieldset>
+            <fieldset class="expandedForm invisible">
                 <legend>Total & Purchase</legend>
-                <div>
-                    <p class="rawprice"></p>
-                    <p class="tax"></p>
-                    <p class="shipping"></p>
-                    <p class="total"></p>
-                </div>
+                <p class="rawprice">Price (before shipping and tax): </p>
+                <p class="tax">Taxes: </p>
+                <p class="shipping">Shipping: </p>
+                <p class="total">Total Cost: </p>
                 <label for="submit">Finished:
                     <input type="submit" id="submit" value="Confirm Purchase">
                 </label>

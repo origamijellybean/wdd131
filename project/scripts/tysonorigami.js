@@ -39,7 +39,28 @@ if (window.location.pathname.includes("store.html")) {
         productSelector.appendChild(productElement);
     });
 }
+const bookSelector = document.querySelector("#product");
+const prices = document.querySelectorAll(".rawprice");
+const taxes = document.querySelector(".tax");
+const shippingCost = document.querySelector(".shipping");
+const totalCost = document.querySelector(".total");
+const extraForms = document.querySelectorAll(".expandedForm");
 
+bookSelector.addEventListener('change', () => {
+    extraForms.forEach(extraForm => {
+        extraForm.classList.remove("invisible");
+    });
+    let bookSelection = products.find(book => book.id === bookSelector.value);
+    prices.forEach(price => {
+        price.textContent = `Price (before shipping and tax): $${bookSelection.price}`;
+    });
+    let tax = bookSelection.price * 0.0695;
+    taxes.textContent = `Taxes: $${tax.toFixed(2)}`;
+    let shipping = 5.00;
+    shippingCost.textContent = `Shipping: $${shipping.toFixed(2)}`;
+    let total = bookSelection.price + tax + shipping;
+    totalCost.textContent = `Total Cost: $${total.toFixed(2)}`;
+});
 
 const historyBtn = document.querySelector("#history");
 const stylesBtn = document.querySelector("#styles");

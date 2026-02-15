@@ -124,6 +124,7 @@ h2 {
     border-radius: 5px 5px 0 0;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding: 5px;
     color: white;
 }
 
@@ -324,24 +325,21 @@ fieldset {
 
 label {
     display: inline-block;
-    /* text-align: right; */
 }
-/* input {
-    max-width: 300px;
-} */
-
 
 
 input[type="checkbox"] select,
 input[type="date"],
 input[type="submit"],
-input[type="select"],
+select,
 input[type="text"],
 input[type="tel"],
 input[type="number"],
 input[type="month"],
 textarea {
     width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
 legend {
@@ -369,6 +367,7 @@ legend {
 
 label {
     font-size: 16px;
+    max-width: 100%;
 }
 
 #productname .subtext,
@@ -400,4 +399,26 @@ textarea,
 
 input[type='submit'] {
     padding: 3px;
+}
+
+form p, label {
+    padding: 8px 0px;
+}
+
+.expandedForm.invisible {
+    display: none;
+}
+
+#submit {
+    background-color: white;
+    color: darkgreen;
+    border-color: saddlebrown;
+    border-radius: 4px;
+}
+
+#submit:hover {
+    color: white;
+    background-color: darkgreen;
+    border-color: darkorange;
+    border-radius: 4px;
 }
